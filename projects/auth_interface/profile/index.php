@@ -52,10 +52,7 @@ if (isset($_SESSION["login"]) && isset($_SESSION["id"])) {
 
         mysqli_close($con);
 
-        $message = $_POST['change'];
-        echo "<script type='text/javascript'>alert('$message');</script>";
-
-        //header('Location: https://www.jcchevalier.fr/projects/auth_interface/profile');
+        header('Location: https://www.jcchevalier.fr/projects/auth_interface/profile');
 
     } else {
         $btn_value = 'Modify';
