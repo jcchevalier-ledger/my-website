@@ -1,0 +1,42 @@
+body, html {
+    scroll-behavior: smooth;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1, p {
+    text-align: center;
+}
+
+hr {
+    background-color: #282E34;
+}
+
+.background-1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-image: url("../../img/computer-2.jpg");
+    min-height: 100%;
+}
+
+.central {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 50px;
+}
+
+.col-sm-6 p {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.btn {
+    display: block;
+    margin: auto;
+    white-space: normal;
+}

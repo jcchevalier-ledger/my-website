@@ -1,0 +1,15 @@
+#my-experience {
+    background-color: #282E34;
+    vertical-align: middle;
+    color: darkgrey;
+    position: relative;
+    padding:50px;
+}
+
+#my-experience h1 {
+    text-align: center;
+}
+
+#my-experience hr {
+    background-color: white;
+}

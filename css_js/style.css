@@ -1,0 +1,134 @@
+body, html {
+    scroll-behavior: smooth;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url("../img/CMP.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.background-1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.background-2 {
+    height: 40vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/computer.jpg");
+    min-height: 40%;
+}
+
+#intro {
+    position: absolute;
+    text-align: center;
+    background-color: cadetblue;
+    color: white;
+    padding: 0;
+    top: 65%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#profile-1 {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border: grey solid 3px;
+    height: 30vh;
+}
+
+#about-me {
+    color: dimgrey;
+    background-color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+h2 {
+    text-align: left;
+    margin-left: 5%;
+}
+
+.white-on-black{
+    color: white;
+    background-color: #282E34;
+}
+
+.page-header {
+    text-align: left;
+    margin: 5vh auto auto;
+}
+
+.page-header img{
+    max-height: 100%;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page-header.jumbotron {
+    padding: 2% 0;
+}
+
+.title {
+    margin: auto;
+}
+
+p {
+    text-align: justify;
+    line-height: 250%;
+    margin: 2% 0 0;
+    text-indent: 5%;
+}
+
+h4 {
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 3%;
+    text-align: left;
+    line-height: 250%;
+}
+
+.navbar {
+    background-color: #e9ecef;
+}
+
+.container {
+    padding: 0;
+}
+
+strong .white-on-black{
+    color: white;
+}
+
+.cutout {
+    text-align: center;
+    text-indent: 0;
+    margin: 0;
+}

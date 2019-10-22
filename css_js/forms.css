@@ -1,0 +1,67 @@
+.wrapper.form {
+    padding: 10vw;
+    height: 100vh;
+}
+
+.jumbotron.form {
+    position: relative;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.btn-secondary {
+    background-color: #282E34;
+}
+
+.valid-input {
+    border: seagreen 1px solid;
+    background: rgba(63, 191, 63, 0.2);
+}
+
+.invalid-input {
+    border: darkred 1px solid;
+    background: rgba(191, 63, 63, 0.2);
+}
+
+.modal {
+    text-align: center;
+    padding: 0;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#email {
+    margin: auto;
+    width: auto;
+}
+
+#bmessage {
+    margin: auto;
+    width: 80%;
+    height: 10vh;
+}
+
+#username {
+    width: 25%;
+    margin: auto;
+}
+
+#password {
+    width: 25%;
+    margin: auto;
+}
