@@ -78,6 +78,9 @@ if(isset($_SESSION['login']) && isset($_SESSION['id'])) {
     <a class='navbar-brand'>
         <img src='../../../img/avatar/avatar.png' class='profile-img rounded-circle' alt=''>
     </a>
+    <a class='title'>
+        {$_SESSION['login']}
+    </a>
     <form class='form-inline' method='post'>
         <a class='nav-link' href='https://www.jcchevalier.fr/projects/auth_interface/profile' target='_self'>Your profile</a>
         <input type='submit' name='logout' class='btn btn-danger' value='Logout'>

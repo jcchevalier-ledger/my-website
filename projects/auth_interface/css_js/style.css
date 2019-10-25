@@ -101,3 +101,17 @@ label, input {
 #password-change {
     margin-bottom: 5%;
 }
+
+.valid-input {
+    border: green 1px solid;
+    background: rgba(63, 191, 63, 0.2);
+}
+
+.invalid-input {
+    border: red 1px solid;
+    background: rgba(191, 63, 63, 0.2);
+}
+
+.title {
+    margin: auto;
+}
