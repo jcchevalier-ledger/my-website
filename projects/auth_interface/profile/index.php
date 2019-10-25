@@ -75,9 +75,10 @@ if (isset($_SESSION["login"]) && isset($_SESSION["id"])) {
 
         if (isset($_POST['email']) and strcmp($_POST['email'], $_SESSION['email']) !== 0) {
             if (isValidEmail($_POST['email'])) {
-                $input_mail = 'valid-input';
+                $isValidMail = true;
             } else {
                 $input_mail = 'invalid-input';
+                $input_others = 'valid-input';
                 $isValidMail = false;
                 $email = $_POST['email'];
                 $last_name = $_POST['last-name'];
@@ -110,10 +111,13 @@ if (isset($_SESSION["login"]) && isset($_SESSION["id"])) {
     <a class='title'>
         <?php echo $_SESSION['login'] ?>
     </a>
-    <form class='form-inline' method='post'>
-        <a class='nav-link' href='https://www.jcchevalier.fr/projects/auth_interface/' target='_self'>Home</a>
-        <input type='submit' name='logout' class='btn btn-danger' value='Logout'>
-    </form>
+    <div>
+        <a class='nav-link' href='../index.php' target='_self'
+           style='display: inline-block'>Home</a>
+        <a href="../logout.php" style='display: inline-block'>
+            <button type='button' class='btn btn-danger'>Logout</button>
+        </a>
+    </div>
 </nav>
 
 <div class='background-1'>
@@ -131,14 +135,14 @@ if (isset($_SESSION["login"]) && isset($_SESSION["id"])) {
                     <div class='form-group row'>
                         <label for='first-name' class='mx-sm-3 col-sm-2'>First name</label>
                         <label class="col-sm-7">
-                            <input type='text' class='form-control' name='first-name'
+                            <input type='text' class='form-control <?php echo $input_others ?>' name='first-name'
                                    value='<?php echo $first_name ?>' <?php echo $readonly_value ?>>
                         </label>
                     </div>
                     <div class='form-group row'>
                         <label for='last-name' class='mx-sm-3 col-sm-2'>Last name</label>
                         <label class="col-sm-7">
-                            <input type='text' class='form-control' name='last-name'
+                            <input type='text' class='form-control <?php echo $input_others ?>' name='last-name'
                                    value='<?php echo $last_name ?>' <?php echo $readonly_value ?>>
                         </label>
                     </div>
@@ -181,11 +185,6 @@ if (isset($_SESSION["login"]) && isset($_SESSION["id"])) {
 <?php
 if (!$isValidMail) {
     echo "<script>$('[data-toggle=\"tooltip\"]').tooltip()</script>";
-}
-if (isset($_POST["logout"])) {
-    unset($_SESSION);
-    session_destroy();
-    header('Location: https://www.jcchevalier.fr/projects/auth_interface/');
 } else {
     header('Location: https://www.jcchevalier.fr/projects/auth_interface/');
     unset($_POST);
