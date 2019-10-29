@@ -70,9 +70,6 @@ if (isset($_SESSION['login']) && isset($_SESSION['id'])) {
     <a class='navbar-brand'>
         <img src='../../../img/avatar/avatar.png' class='profile-img rounded-circle' alt=''>
     </a>
-    <a class='title'>
-        {$_SESSION['login']}
-    </a>
     <div>
         <a class='nav-link' href='profile' target='_self' style='display: inline-block'>Your profile</a>
         <a href='logout.php' style='display: inline-block'>

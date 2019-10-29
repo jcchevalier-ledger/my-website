@@ -77,6 +77,7 @@ if (isset($_SESSION["login"]) && isset($_SESSION["id"])) {
             if (isValidEmail($_POST['email'])) {
                 $isValidMail = true;
             } else {
+                $tooltip = "title='Invalid email'";
                 $input_mail = 'invalid-input';
                 $input_others = 'valid-input';
                 $isValidMail = false;
@@ -101,15 +102,14 @@ if (isset($_SESSION["login"]) && isset($_SESSION["id"])) {
             header('Location: https://www.jcchevalier.fr/projects/auth_interface/profile');
         }
     }
+} else {
+    header('Location: https://www.jcchevalier.fr/projects/auth_interface');
 }
 ?>
 
 <nav id='navbar' class='navbar navbar-expand navbar-light fixed-top justify-content-between'>
     <a class='navbar-brand'>
         <img src='<?php echo $_SESSION['profile_pict'] ?>' class='profile-img rounded-circle' alt=''>
-    </a>
-    <a class='title'>
-        <?php echo $_SESSION['login'] ?>
     </a>
     <div>
         <a class='nav-link' href='../index.php' target='_self'
@@ -131,44 +131,41 @@ if (isset($_SESSION["login"]) && isset($_SESSION["id"])) {
 
             <div class='row' style='width: 100%; margin: 0'>
 
-                <div class='col-sm-7'>
-                    <div class='form-group row'>
-                        <label for='first-name' class='mx-sm-3 col-sm-2'>First name</label>
+                <div class='col-sm-8'>
+                    <div class='form-group row' style="padding-bottom: 5%; display: block">
+                        <label for='first-name' class='mx-sm-3 col-sm-2' style="float: left">First name</label>
                         <label class="col-sm-7">
                             <input type='text' class='form-control <?php echo $input_others ?>' name='first-name'
                                    value='<?php echo $first_name ?>' <?php echo $readonly_value ?>>
                         </label>
                     </div>
-                    <div class='form-group row'>
-                        <label for='last-name' class='mx-sm-3 col-sm-2'>Last name</label>
+                    <div class='form-group row' style="padding-bottom: 5%; display: block">
+                        <label for='last-name' class='mx-sm-3 col-sm-2' style="float: left">Last name</label>
                         <label class="col-sm-7">
                             <input type='text' class='form-control <?php echo $input_others ?>' name='last-name'
                                    value='<?php echo $last_name ?>' <?php echo $readonly_value ?>>
                         </label>
                     </div>
-                    <div class='form-group row'>
-                        <label for='email' class='mx-sm-3 col-sm-2'>Email address</label>
+                    <div class='form-group row' style="display: block;">
+                        <label for='email' class='mx-sm-3 col-sm-2' style="float: left">Email address</label>
                         <label class="col-sm-7">
                             <input type='email' class='form-control <?php echo $input_mail ?>' name='email'
                                    value='<?php echo $email ?>' <?php echo $readonly_value ?>
-                                   data-toggle="tooltip" data-placement="bottom" title="Invalid email">
+                                   data-toggle="tooltip" data-placement="bottom" <?php echo $tooltip ?>>
                         </label>
+                    </div>
+
+                    <div style='padding: 0; margin: auto; <?php echo $display ?>'>
+                        <input id='password-change' type='button' class='btn btn-danger' value='Change password'
+                               name='password-change' style='white-space: nowrap;'>
                     </div>
                 </div>
 
-                <div class='col-sm-1' style='width: 0;'></div>
-
-                <div class='col-sm-3'>
-                    <div style='padding: 0; margin: auto; <?php echo $display ?>'>
-                        <input id='password-change' type='button' class='btn btn-danger invalid' value='Change password'
-                               name='password-change' style='white-space: nowrap;'>
-                    </div>
+                <div class='col-sm-4'>
                     <img src='<?php echo $_SESSION['profile_pict'] ?>' class='big-profile-img rounded-circle' alt=''>
                     <button type='button' class='fa fa-pencil-square-o' id='modify' name='profile-change'
                             style='<?php echo $display ?>'></button>
                 </div>
-
-                <div class='col-sm-1'></div>
 
                 <input type='submit' class='btn btn-danger' value='<?php echo $btn_value ?>' name='change'>
 
@@ -179,8 +176,6 @@ if (isset($_SESSION["login"]) && isset($_SESSION["id"])) {
 
     </div>
 </div>
-
-<script src="../css_js/profileActions.js"></script>
 
 <?php
 if (!$isValidMail) {
