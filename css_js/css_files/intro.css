@@ -1,0 +1,19 @@
+#intro {
+    position: absolute;
+    text-align: center;
+    background-color: #1abc9c;
+    color: white;
+    padding: 0;
+    top: 65%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#profile-1 {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border: grey solid 3px;
+    height: 30vh;
+}

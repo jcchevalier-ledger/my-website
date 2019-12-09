@@ -1,5 +1,4 @@
 <?php
-echo "NUL NUL NUL";
 if (isset($_POST['email']) && isset($_POST['bmessage'])) {
 
     $to = "jean.christophe.chevalier.3@gmail.com";
@@ -11,5 +10,4 @@ if (isset($_POST['email']) && isset($_POST['bmessage'])) {
     $headers .= "Content-type: text/html; charset=utf-8\n";
 
     mail($to,$subject,$txt,$headers);
-    echo "NUL NUL NUL";
 }
