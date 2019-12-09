@@ -83,6 +83,6 @@ ul {
 }
 
 .nav-link.active {
-    background-color: #1abc9c;
+    background-color: darkgray;
     border-radius: 10px;
 }
