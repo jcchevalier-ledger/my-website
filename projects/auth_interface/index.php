@@ -84,7 +84,7 @@ if (isset($_SESSION['login']) && isset($_SESSION['id'])) {
 
 		<h1>Welcome, {$_SESSION['login']}</h1>
 		<hr>
-		<p>You are now logged on my plateform. </p>
+		<p>You are now logged on my platform. </p>
 		
 	</div>
 </div>";

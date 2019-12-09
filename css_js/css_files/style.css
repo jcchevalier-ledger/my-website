@@ -1,0 +1,88 @@
+body, html {
+    scroll-behavior: smooth;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url("../../img/CMP.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+p {
+    text-align: justify;
+    line-height: 250%;
+    margin: 2% 0 0;
+    text-indent: 5%;
+}
+
+h2 {
+    text-align: left;
+    margin-left: 5%;
+}
+
+h4 {
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 3%;
+    text-align: left;
+    line-height: 250%;
+}
+
+.white-on-black {
+    color: white;
+    background-color: #34495e;
+}
+
+.page-header {
+    text-align: left;
+    margin: 5vh auto auto;
+}
+
+.page-header img {
+    max-height: 100%;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page-header.jumbotron {
+    padding: 2% 0;
+}
+
+.title {
+    margin: auto;
+}
+
+.cutout {
+    text-align: center;
+    text-indent: 0;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #ecf0f1;
+}
+
+.nav-link {
+    padding: 0;
+}
+
+.nav-link.active {
+    background-color: darkgray;
+    border-radius: 10px;
+}
